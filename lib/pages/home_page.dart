@@ -45,7 +45,35 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-          )
+          ),
+          SliverList(delegate: SliverChildBuilderDelegate((context, index) {
+            return ListTile(
+              leading: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Image.asset("assets/images/credit-card.png", height: 40),
+              ),
+              title: const Text(
+                "Transfer",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              subtitle: const Text(
+                "Today",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              trailing: const Text(
+                "+560 Da",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 19,
+                    color: Colors.green),
+              ),
+            );
+          }))
         ],
       )),
     );
