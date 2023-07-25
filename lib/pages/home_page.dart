@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               trailing: const Text(
-                "+560 Da",
+                "+ 560 Da",
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 19,
