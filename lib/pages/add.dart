@@ -171,18 +171,18 @@ class _Add_ScreenState extends State<Add_Screen> {
           }),
           items: _itemei
               .map((e) => DropdownMenuItem(
+                    value: e,
                     child: Container(
                       alignment: Alignment.center,
                       child: Row(
                         children: [
                           Text(
                             e,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           )
                         ],
                       ),
                     ),
-                    value: e,
                   ))
               .toList(),
           selectedItemBuilder: (BuildContext context) => _itemei
@@ -190,8 +190,8 @@ class _Add_ScreenState extends State<Add_Screen> {
                     children: [Text(e)],
                   ))
               .toList(),
-          hint: Padding(
-            padding: const EdgeInsets.only(top: 12),
+          hint: const Padding(
+            padding: EdgeInsets.only(top: 12),
             child: Text(
               'How',
               style: TextStyle(color: Colors.grey),
@@ -213,15 +213,16 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: amount_,
         controller: amount_c,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'amount',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: const BorderSide(width: 2, color: Color(0xff368983))),
         ),
       ),
     );
@@ -234,15 +235,16 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: ex,
         controller: expalin_C,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'explain',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: const BorderSide(width: 2, color: Color(0xff368983))),
         ),
       ),
     );
@@ -252,13 +254,13 @@ class _Add_ScreenState extends State<Add_Screen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         width: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: Color(0xffC5C5C5),
+            color: const Color(0xffC5C5C5),
           ),
         ),
         child: DropdownButton<String>(
@@ -272,39 +274,39 @@ class _Add_ScreenState extends State<Add_Screen> {
           }),
           items: _item
               .map((e) => DropdownMenuItem(
+                    value: e,
                     child: Container(
                       alignment: Alignment.center,
                       child: Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: 40,
-                            child: Image.asset('assets/images/${e}.png'),
+                            child: Image.asset('assets/images/$e.png'),
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text(
                             e,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           )
                         ],
                       ),
                     ),
-                    value: e,
                   ))
               .toList(),
           selectedItemBuilder: (BuildContext context) => _item
               .map((e) => Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 42,
-                        child: Image.asset('assets/images/${e}.png'),
+                        child: Image.asset('assets/images/$e.png'),
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       Text(e)
                     ],
                   ))
               .toList(),
-          hint: Padding(
-            padding: const EdgeInsets.only(top: 12),
+          hint: const Padding(
+            padding: EdgeInsets.only(top: 12),
             child: Text(
               'Name',
               style: TextStyle(color: Colors.grey),
@@ -324,7 +326,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         Container(
           width: double.infinity,
           height: 240,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xff368983),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
