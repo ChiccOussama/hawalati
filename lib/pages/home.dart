@@ -98,11 +98,23 @@ class _HomeState extends State<Home> {
           fontWeight: FontWeight.w600,
         ),
       ),
-      subtitle: Text(
-        '${day[history.datetime.weekday - 1]}  ${history.datetime.year}-${history.datetime.day}-${history.datetime.month}',
-        style: const TextStyle(
-          fontWeight: FontWeight.w600,
-        ),
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            history.explain,
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: history.IN == "Income" ? Colors.green : Colors.red,
+            ),
+          ),
+          Text(
+            '${day[history.datetime.weekday - 1]}  ${history.datetime.year}-${history.datetime.day}-${history.datetime.month}',
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
       ),
       trailing: Text(
         history.amount,
