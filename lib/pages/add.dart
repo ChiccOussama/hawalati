@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:hawalati/data/add_date.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -11,7 +13,7 @@ class Add_Screen extends StatefulWidget {
 
 class _Add_ScreenState extends State<Add_Screen> {
   final box = Hive.box<Add_data>('data');
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   String? selctedItem;
   String? selctedItemi;
   final TextEditingController expalin_C = TextEditingController();
@@ -31,7 +33,6 @@ class _Add_ScreenState extends State<Add_Screen> {
   ];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     ex.addListener(() {
       setState(() {});
@@ -43,6 +44,7 @@ class _Add_ScreenState extends State<Add_Screen> {
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
