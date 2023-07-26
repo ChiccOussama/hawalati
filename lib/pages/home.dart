@@ -136,7 +136,7 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               height: 240,
               decoration: const BoxDecoration(
-                color: Color(0xff368983),
+                color: Color.fromARGB(255, 64, 4, 243),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -191,21 +191,172 @@ class _HomeState extends State<Home> {
           ],
         ),
         Positioned(
-          top: 140,
-          left: 37,
+          top: 120,
+          left: 55,
           child: Container(
             height: 170,
             width: 320,
             decoration: BoxDecoration(
               boxShadow: const [
                 BoxShadow(
-                  color: Color.fromRGBO(47, 125, 121, 0.3),
+                  color: Colors.blueAccent,
+                  offset: Offset(0, 4),
+                  blurRadius: 12,
+                  spreadRadius: 6,
+                ),
+              ],
+              gradient: const LinearGradient(
+                //* Color Pour carte
+                colors: [
+                  Color.fromARGB(255, 64, 4, 243),
+                  Color.fromARGB(255, 206, 6, 241),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Total Balance',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Icon(
+                        Icons.more_horiz,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 7),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Row(
+                    children: [
+                      Text(
+                        '${total()} DA',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 25),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: const [
+                          CircleAvatar(
+                            radius: 13,
+                            backgroundColor: Colors.green,
+                            child: Icon(
+                              Icons.arrow_downward,
+                              color: Colors.white,
+                              size: 19,
+                            ),
+                          ),
+                          SizedBox(width: 7),
+                          Text(
+                            'Income',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Color.fromARGB(255, 216, 216, 216),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          CircleAvatar(
+                            radius: 13,
+                            backgroundColor: Colors.red,
+                            child: Icon(
+                              Icons.arrow_upward,
+                              color: Colors.white,
+                              size: 19,
+                            ),
+                          ),
+                          SizedBox(width: 7),
+                          Text(
+                            'Expenses',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Color.fromARGB(255, 216, 216, 216),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '${income()} DA',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        '${expenses()} DA',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+/*
+Container(
+            height: 170,
+            width: 320,
+            decoration: BoxDecoration(
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.blue,
+                  //Color.fromRGBO(47, 125, 121, 0.3),
                   offset: Offset(0, 6),
                   blurRadius: 12,
                   spreadRadius: 6,
                 ),
               ],
-              color: const Color.fromARGB(255, 47, 125, 121),
+              color: Colors.blueAccent,
+              //const Color.fromARGB(255, 47, 125, 121),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
@@ -328,8 +479,4 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-        )
-      ],
-    );
-  }
-}
+*/

@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           Navigator.of(context).push(
               MaterialPageRoute(builder: (context) => const Add_Screen()));
         },
-        backgroundColor: const Color(0xff368983),
+        backgroundColor: const Color.fromARGB(255, 64, 4, 243),
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -47,8 +47,9 @@ class _HomePageState extends State<HomePage> {
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color:
-                      index_color == 0 ? const Color(0xff368983) : Colors.grey,
+                  color: index_color == 0
+                      ? const Color.fromARGB(255, 64, 4, 243)
+                      : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -62,8 +63,9 @@ class _HomePageState extends State<HomePage> {
                 child: Icon(
                   Icons.bar_chart_outlined,
                   size: 30,
-                  color:
-                      index_color == 1 ? const Color(0xff368983) : Colors.grey,
+                  color: index_color == 1
+                      ? const Color.fromARGB(255, 64, 4, 243)
+                      : Colors.grey,
                 ),
               ),
               const SizedBox(width: 10),
@@ -76,8 +78,9 @@ class _HomePageState extends State<HomePage> {
                 child: Icon(
                   Icons.account_balance_wallet_outlined,
                   size: 30,
-                  color:
-                      index_color == 2 ? const Color(0xff368983) : Colors.grey,
+                  color: index_color == 2
+                      ? const Color.fromARGB(255, 64, 4, 243)
+                      : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -91,8 +94,9 @@ class _HomePageState extends State<HomePage> {
                 child: Icon(
                   Icons.person_outlined,
                   size: 30,
-                  color:
-                      index_color == 3 ? const Color(0xff368983) : Colors.grey,
+                  color: index_color == 3
+                      ? const Color.fromARGB(255, 64, 4, 243)
+                      : Colors.grey,
                 ),
               ),
             ],

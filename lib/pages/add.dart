@@ -103,7 +103,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: const Color(0xff368983),
+          color: const Color.fromARGB(255, 64, 4, 243),
         ),
         width: 120,
         height: 50,
@@ -141,7 +141,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           });
         },
         child: Text(
-          'Date : ${date.year} / ${date.day} / ${date.month}',
+          'Date : ${date.day} / ${date.month} / ${date.year}',
           style: const TextStyle(
             fontSize: 15,
             color: Colors.black,
@@ -329,7 +329,14 @@ class _Add_ScreenState extends State<Add_Screen> {
           width: double.infinity,
           height: 240,
           decoration: const BoxDecoration(
-            color: Color(0xff368983),
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 64, 4, 243),
+                Color.fromARGB(255, 206, 6, 241)
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
